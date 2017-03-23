@@ -1,0 +1,46 @@
+//http://ussalivetiming.com/api/races/2017-03-25
+{"races": 
+   [
+      {
+      	"reports":[
+                    {"url":"www.live-timing.com\/race2.php?r=174390","title":"Competitors"},
+                    {"url":"www.live-timing.com\/report.php?r=174390&rp=944205","title":"Competitors List"}
+                  ],
+        "codex":"",
+        "who":"U",
+        "name":"U10 Championships",
+        "type1":"Slalom",
+        "type2":"Ladies",
+        "country":"USA",
+        "state":"CA",
+        "resort":"Squaw Valley",
+        "start":"9:30 AM",
+        "message":"as of 3\/22\/17 11:00am",
+        "image":"Squaw Alpine Logo in White.jpg",
+        "sponsorImage":"Squaw Alpine Logo in White.jpg",
+        "Pr":"99",
+        "ID":"174390",
+        "url":"www.live-timing.com\/race2.php?r=174390"
+       },
+
+       {
+   		"reports":[
+   				{"url":"www.live-timing.com\/race2.php?r=174395","title":"Competitors"},
+   				{"url":"www.live-timing.com\/report.php?r=174395&rp=944206","title":"Competitors List"}
+   				  ],
+   		"codex":"",
+   		"who":"U",
+   		"name":"U10 Championships",
+   		"type1":"Slalom",
+   		"type2":"Men",
+   		"country":"USA",
+   		"state":"CA",
+   		"resort":"Squaw Valley",
+   		"start":"10:15 AM",
+   		"message":"as of 3\/22\/17 11:00am",
+   		"image":"Squaw Alpine Logo in White.jpg",
+   		"sponsorImage":"Squaw Alpine Logo in White.jpg",
+        "Pr":"99","ID":"174395",
+       	"url":"www.live-timing.com\/race2.php?r=174395"}
+	]
+}
