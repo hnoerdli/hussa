@@ -40,7 +40,7 @@
 					.then(null, console.error.bind(console));
 		</script>
 		<script>
-			var x = document.getElementById("demo");
+			var x = document.getElementById("geoPosition");
             function getLocation() {
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(showPosition);
@@ -55,7 +55,7 @@
 		</script>
 	</head>
 	<body>
-        <div id="demo"/>
+        <div id="geoPosition"/>
 		<app>Loading...</app>
 	</body>
 </html>

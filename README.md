@@ -1,15 +1,6 @@
 # Spring Boot Angular2 Starter Application
-[![Build Status](https://travis-ci.org/Nandtel/spring-boot-angular2-starter.svg?branch=master)](https://travis-ci.org/Nandtel/spring-boot-angular2-starter)
 
-The simple starter application on Spring Boot with AngularJS 2. This is my personal base application for Spring Boot + AngularJS 2 projects. I prefer to use gradle as a primary build system and gulp as a build system for front-end. All the interaction with compiling typescript, prefixing css and installing typings are handled by gulp. All the tasks for installing node, npm and gulp were implemented in the gradle for more convient introduction.
-
-## Motivation
-
-My goal is basic, simple and configurated project for easy start with Spring Boor and AngularJS 2.
-
-## Demo
-Demo at Heroku: https://springbootangular2.herokuapp.com <br />
-Wait a few seconds until the Heroku initializes app. 
+This is mostly a test bed for Henry to learn various technologies. I gratuitously kyped someone's simple starter application on Spring Boot with AngularJS 2. Gradle is used as primary build system and gulp as a build system for front-end. All the interaction with compiling typescript, prefixing css and installing typings are handled by gulp. All the tasks for installing node, npm and gulp were implemented in gradle for more convient introduction.
 
 ## Installation
 

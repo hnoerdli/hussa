@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @SpringBootApplication
 @RestController
@@ -30,9 +28,18 @@ public class SpringBootAngular2StarterApplication {
     }
 
     @RequestMapping(value = "/resort-proximity", produces="application/json; charset=UTF-8")
-    public List<Resort> getAllWithinProximity(@RequestParam("lat") double lat, @RequestParam("lon") double lon) {
+    public List<Resort> getAllWithinProximity(@RequestParam("lat") final double lat,
+                                              @RequestParam("lon") final double lon,
+                                              @RequestParam("distance") final int distance,
+                                              @RequestParam("unit") final String unit) {
 
-        return new ArrayList<>();
+        List<Resort> resorts = new ArrayList(ResortFactory.getResorts().values());
+
+        Comparator<Resort> comparator = (left, right) -> left.distance(lat, lon)  < right.distance(lat, lon) ? 0 : 1;
+
+        Collections.sort(resorts, comparator);
+
+        return resorts;
     }
 
     @RequestMapping(value = "/resort", produces="application/json; charset=UTF-8")

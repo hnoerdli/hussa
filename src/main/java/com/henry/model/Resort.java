@@ -15,6 +15,14 @@ public class Resort {
             this._stateProv = stateProv;
     }
 
+    public int distance(double x2, double y2) {
+        //
+        Double dist = Math.sqrt(
+                    Math.pow(x2 - this._coordinates.getLat(), 2) +
+                    Math.pow(y2 - this._coordinates.getLon(), 2)
+        );
+        return dist.intValue();
+    }
     public Geo getCoordinates() {
         return this._coordinates;
     }
@@ -31,6 +39,15 @@ public class Resort {
             this._lat = lat;
             this._lon = lon;
         }
+
+        public double getLat() {
+            return _lat;
+        }
+
+        public double getLon() {
+            return _lon;
+        }
+
 
         @Override
         public boolean equals(Object o) {
