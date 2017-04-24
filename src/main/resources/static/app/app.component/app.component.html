@@ -1,6 +1,17 @@
-<nav>
-    <a [routerLink]="['/dashboard']">Dashboard</a>
-    <a [routerLink]="['/server']">Server</a>
-    <a [routerLink]="['/404']">NotFound</a>
-</nav>
-<router-outlet></router-outlet>
+<nav><a [routerLink]="['/hussa']">Real Time Results</a> <a [routerLink]="['/dashboard']">Dashboard</a> <a [routerLink]="['/server']">Server</a> <a [routerLink]="['/404']">NotFound</a></nav><!--
+<script>
+			var x = document.getElementById("geoPosition");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+            }
+</script>
+<div id="geoPosition"/>
+--><router-outlet></router-outlet>

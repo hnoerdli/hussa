@@ -26,6 +26,13 @@ public class Resort {
     public Geo getCoordinates() {
         return this._coordinates;
     }
+    public String getName() {
+        return this._name;
+    }
+
+    public String getStateProv() {
+        return this._stateProv;
+    }
 
 
     //39.938059, -105.584732

@@ -4,3 +4,5 @@
 build
 node-v5.9.1-darwin-x64
 node-v6.10.0-darwin-x64
+node_modules/gulp-sass/node_modules/node-sass/vendor/darwin-x64-51/
+src/main/main.iml

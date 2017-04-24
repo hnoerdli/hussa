@@ -5,6 +5,7 @@ import {AppComponent} from "./app.component/app.component";
 import {NotFoundComponent} from "./404.component/404.component";
 import {ServerComponent} from "./server.component/server.component";
 import {DashboardComponent} from "./dashboard.component/dashboard.component";
+import {HussaComponent} from "./hussa.component/hussa.component";
 
 
 import {FormsModule} from "@angular/forms";
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
     {path: 'server',    component: ServerComponent,    data: {title: 'Server'}},
     {path: '404',       component: NotFoundComponent,  data: {title: 'Not Found'}},
     {path: 'dashboard', component: DashboardComponent, data: {title: 'Dash'}},
+    {path: 'hussa',     component: HussaComponent, data: {title: 'Real Time Results'}},
     {path: '**',        redirectTo: '/404'}
 ];
 
@@ -31,7 +33,8 @@ const appRoutes: Routes = [
         AppComponent,
         NotFoundComponent,
         DashboardComponent,
-        ServerComponent
+        ServerComponent,
+        HussaComponent
     ],
     bootstrap: [AppComponent]
 })

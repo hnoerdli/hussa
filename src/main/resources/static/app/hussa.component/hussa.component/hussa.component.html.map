@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["app/hussa.component/hussa.component/hussa.component.html"],"sourcesContent":["<div>\n    <h1>Resorts Near You (pick one):</h1>\n    <ul>\n        <li *ngFor=\"let resort of resorts\">{{resort.name}}</li>\n    </ul>\n</div>"],"file":"hussa.component.html"}
