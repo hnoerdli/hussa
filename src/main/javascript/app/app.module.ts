@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     {path: 'server',    component: ServerComponent,    data: {title: 'Server'}},
     {path: '404',       component: NotFoundComponent,  data: {title: 'Not Found'}},
     {path: 'dashboard', component: DashboardComponent, data: {title: 'Dash'}},
-    {path: 'hussa',     component: HussaComponent, data: {title: 'Real Time Results'}},
+    {path: 'hussa',     component: HussaComponent, data: {title: 'Real Time Resultss'}},
     {path: '**',        redirectTo: '/404'}
 ];
 

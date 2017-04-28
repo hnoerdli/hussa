@@ -38,9 +38,9 @@ public class SpringBootAngular2StarterApplication {
 
         List<Resort> resorts = new ArrayList(ResortFactory.getResorts().values());
 
-        Comparator<Resort> comparator = (left, right) -> left.distance(lat, lon)  < right.distance(lat, lon) ? 0 : 1;
+        Comparator<Resort> comparator = (left, right) -> left.distance(lat, lon)  < right.distance(lat, lon) ? -1 : 1;
 
-        Collections.sort(resorts, comparator);
+        resorts.sort(comparator);
 
         return resorts;
     }
