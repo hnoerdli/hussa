@@ -18,5 +18,5 @@ export class ServerComponent implements OnInit {
         return this.serverService.getRandomNumber()
             .subscribe(number => this.number = number, error => this.errorMessage = <any>error);
     }
-    
+
 }

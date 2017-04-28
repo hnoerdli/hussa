@@ -18,8 +18,9 @@ export class ServerService {
             .catch(error => Observable.throw(error.json().error || 'Server error'))
     }
 
-    getCloseResorts(): Observable<number> {
-        return this.http.get(this.Server.GETResortProximity)
+    getCloseResorts(position: Position): Observable<number> {
+
+        return this.http.get(this.Server.GETResortProximity + '/?lat=${position.coords.latitude }&lon=-105.150081&unit=10&distance=100')
             .map(res => <number> res.json())
             .catch(error => Observable.throw(error.json().error || 'Server error'))
     }

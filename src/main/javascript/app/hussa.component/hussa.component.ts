@@ -1,30 +1,50 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {HttpModule} from '@angular/http';
+import {Common, Coordinate, Resort} from "../common/common";
+import {ServerService} from "../service/server.service";
 
 @Component({
     selector: 'hussa',
     templateUrl: 'app/hussa.component/hussa.component.html',
     styleUrls: ['app/hussa.component/hussa.component.css'],
+    providers: [ServerService, HttpModule]
 })
-export class HussaComponent {
-    resorts: Array<Resort> = [
-        new Resort(39.8855619, -105.7619686, "Winter Park", "CO")
 
+export class HussaComponent implements OnInit {
+
+
+    constructor(private _service: ServerService) {}
+
+    resorts: Array<Resort> = [
+        new Resort(new Coordinate(39.8855619, -105.7619686), "Winter Park")
     ];
 
-}
+    loadResortList(position): void {
+        if (this) {
+          this._service.getCloseResorts(position);
+        } else {
+          console.info('no this ;(');
+        }
 
-export class Resort {
+    }
 
-   lat: number;
-   lon: number;
-   name: string;
 
-   constructor(lat: number, lon: number, name: string ) {
-    //super(); /* that shit ain't defined */
-    this.lat = lat;
-    this.long = lon;
-    this.name = name;
+    displayMyCoords(position): void {
+      //it would appear we don't have an instance??
+      if (this) {
+        console.log('instance!');
+      } else {
+        console.log('no instance?');
+      }
+      //window.alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+    }
 
-   }
+    ngOnInit(): void {
+      if (navigator.geolocation) {
+         console.info('ngOnInit: this? ' + this);
+         navigator.geolocation.getCurrentPosition(this.loadResortList);
+         //navigator.geolocation.getCurrentPosition(this.displayMyCoords);
+       }
+    }
 
 }

@@ -1,11 +1,16 @@
 package com.henry.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Created by henry.noerdlinger on 3/22/17.
  */
 public class Resort {
 
     Geo _coordinates;
+    List<String> _aliases = new ArrayList<>();
     String _name;
     String _stateProv;
 
@@ -16,12 +21,16 @@ public class Resort {
     }
 
     public int distance(double x2, double y2) {
-        //
+        //double distance = Math.hypot(x1-x2, y1-y2);
         Double dist = Math.sqrt(
-                    Math.pow(x2 - this._coordinates.getLat(), 2) +
-                    Math.pow(y2 - this._coordinates.getLon(), 2)
+                    Math.pow(this._coordinates.getLat() - x2, 2) +
+                    Math.pow(this._coordinates.getLon() - y2, 2)
         );
         return dist.intValue();
+    }
+
+    public void addAliases(String ... aliases) {
+        this._aliases.addAll(Arrays.asList(aliases));
     }
     public Geo getCoordinates() {
         return this._coordinates;
