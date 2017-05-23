@@ -9,13 +9,13 @@ import java.util.List;
  */
 public class Resort {
 
-    Geo _coordinates;
+    Geo _coordinate;
     List<String> _aliases = new ArrayList<>();
     String _name;
     String _stateProv;
 
     public Resort(double lat, double lon, String name, String stateProv) {
-            this._coordinates = new Geo(lat, lon);
+            this._coordinate = new Geo(lat, lon);
             this._name = name;
             this._stateProv = stateProv;
     }
@@ -23,8 +23,8 @@ public class Resort {
     public int distance(double x2, double y2) {
         //double distance = Math.hypot(x1-x2, y1-y2);
         Double dist = Math.sqrt(
-                    Math.pow(this._coordinates.getLat() - x2, 2) +
-                    Math.pow(this._coordinates.getLon() - y2, 2)
+                    Math.pow(this._coordinate.getLat() - x2, 2) +
+                    Math.pow(this._coordinate.getLon() - y2, 2)
         );
         return dist.intValue();
     }
@@ -32,8 +32,8 @@ public class Resort {
     public void addAliases(String ... aliases) {
         this._aliases.addAll(Arrays.asList(aliases));
     }
-    public Geo getCoordinates() {
-        return this._coordinates;
+    public Geo getCoordinate() {
+        return this._coordinate;
     }
     public String getName() {
         return this._name;

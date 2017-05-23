@@ -4,12 +4,13 @@ export class Common {
 
 export class Resort {
 
-    coord: Coordinate;
     name: string;
+    coordinate: Coordinate;
+    stateProv: string;
 
-    constructor(coord: Coordinate, name: string ) {
-      this.coord = coord;
-     this.name = name;
+    constructor(coordinate: Coordinate, name: string, stateProv: string ) {
+      this.coordinate = coordinate;
+      this.name = name;
      }
 
 }

@@ -1,1 +1,5 @@
-<div><h1>Resorts Near You (pick one):</h1><ul><li *ngFor="let resort of resorts">{{resort.name}}</li></ul><!-- <div>latitude: {{currentPosition.coords.latitude}}, longitude: {{currentPosition.coords.longitude}} </div> --></div>
+<div><h1>Resorts Near You (pick one):</h1><ul><li *ngFor="let resort of resorts">{{resort.name}}</li></ul><!-- <div>latitude: {{currentPosition.coords.latitude}}, longitude: {{currentPosition.coords.longitude}} </div> --><!--
+    <select [(ngModel)]="car.colour"">
+    <option *ngFor="let x of colours" [value]="x.id" [selected]="car.color.id == x.id">{{x.name}}</option>
+    </select>
+    --></div>
